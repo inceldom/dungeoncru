@@ -10,7 +10,7 @@ task.wait()
 local function damageTick()
     local character = localPlayer.Character or localPlayer.CharacterAdded:Wait()
     if character and character:FindFirstChild("IsDead") then
-        character.IsDead:Destroy()--godmode
+        --character.IsDead:Destroy()--godmode
     end
     local mob = mobs:FindFirstChildOfClass("Model")
     if not mob then
