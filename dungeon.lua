@@ -1,3 +1,6 @@
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
 local localPlayer,remote,arg1 = game:GetService("Players").LocalPlayer,game:GetService("ReplicatedStorage"):WaitForChild("ClientServerNetwork",3):WaitForChild("MagicNetwork",3),"Swing"
 local mobs,startRemote = workspace:WaitForChild("Game",3):WaitForChild("Mobs",3),game:GetService("ReplicatedStorage"):WaitForChild("DungeonEvents",3):WaitForChild("DungeonNetwork",3)
 spawn(function()--they fucking make it yield
@@ -18,5 +21,5 @@ local function damageTick()
     remote:FireServer(arg1,targetPart.Position)
 end
 while game:GetService("RunService").RenderStepped:Wait() do
-    damageTick()
+    pcall(damageTick)--I cant be asked to fix .Character
 end
