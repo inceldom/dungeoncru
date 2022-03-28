@@ -14,7 +14,7 @@ local function damageTick()
     if not (rootPart and targetPart) then
         return --warn("Couldn't find the target HRP")
     end
-    rootPart.CFrame = targetPart.CFrame*CFrame.new(0,-10,3)
+    rootPart.CFrame = targetPart.CFrame*CFrame.new(0,10,3)
     remote:FireServer(arg1,targetPart.Position)
 end
 while game:GetService("RunService").RenderStepped:Wait() do
