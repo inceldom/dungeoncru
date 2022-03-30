@@ -14,6 +14,6 @@ for i,v in next, difficulties do
 end
 --tired of writing WaitForChild I am just gonna guess its fucking loaded enough to have the party remotes by now
 local partyNetwork = game:GetService("ReplicatedStorage").RemoteEvents.PartyRemotes
-partyNetwork.CreateParty:FireServer("Rune Arc Kingdom",difficultyName,selectedDifficulty,true,true)
+partyNetwork.CreateParty:FireServer("Rune Arc Kingdom",difficultyName,selectedDifficulty,true,false)
 task.wait(1)
 partyNetwork.MiscPartyRemote:FireServer("Start")
